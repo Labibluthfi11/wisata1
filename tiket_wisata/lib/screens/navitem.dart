@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
-import 'gallery_page.dart';
-import 'profile_page.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MainPage(),
+    );
+  }
+}
 
 class MainPage extends StatefulWidget {
   @override
@@ -11,16 +22,11 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
+  // Daftar halaman yang akan ditampilkan sesuai index
   final List<Widget> _pages = [
-    HomePage(),
-    GalleryPage(),
-    ProfilePage(),
-  ];
-
-  final List<String> _titles = [
-    "Home Page",
-    "Gallery Page",
-    "Profile Page",
+    Center(child: Text("Home Page", style: TextStyle(fontSize: 24))),
+    Center(child: Text("Gallery Page", style: TextStyle(fontSize: 24))),
+    Center(child: Text("Profile Page", style: TextStyle(fontSize: 24))),
   ];
 
   void _onItemTapped(int index) {
@@ -32,10 +38,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(_titles[_selectedIndex]), // Ganti judul sesuai halaman
-        backgroundColor: Colors.purple,
-      ),
+      appBar: AppBar(title: Text("Satwa Kita")),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: [
