@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import 'order_page.dart'; // Ubah dari home_page.dart ke order_page.dart
 import 'gallery_page.dart';
 import 'profile_page.dart';
 
@@ -12,13 +12,13 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    HomePage(),
+    OrderPage(), // Mengubah dari HomePage() ke OrderPage()
     GalleryPage(),
     ProfilePage(),
   ];
 
   final List<String> _titles = [
-    "Home Page",
+    "Order Page", // Mengubah dari "Home Page" ke "Order Page"
     "Gallery Page",
     "Profile Page",
   ];
@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_titles[_selectedIndex]), // Ganti judul sesuai halaman
+        title: Text(_titles[_selectedIndex]), // Menyesuaikan judul halaman
         backgroundColor: Colors.purple,
       ),
       body: _pages[_selectedIndex],
