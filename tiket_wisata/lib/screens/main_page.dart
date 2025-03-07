@@ -18,7 +18,7 @@ class _MainPageState extends State<MainPage> {
   ];
 
   final List<String> _titles = [
-    "Order Page", // Mengubah dari "Home Page" ke "Order Page"
+    "Order ticket", // Mengubah dari "Home Page" ke "Order Page"
     "Gallery Page",
     "Profile Page",
   ];
